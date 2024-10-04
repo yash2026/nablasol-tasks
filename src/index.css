@@ -15,3 +15,11 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+  .wave-image-cover {
+    background: url("../public/wave-image.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
