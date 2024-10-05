@@ -3,7 +3,7 @@ import { Input } from "antd";
 
 const Step1 = ({ onChange, formData }) => {
   return (
-    <div className="px-20">
+    <div className="px-20 max-[540px]:px-4">
       {/* Step and Description */}
       <h3 className="text-center text-xl font-medium text-gray-500">Step 1</h3>
       <h4 className="text-center text-2xl font-medium mb-1 text-gray-700">
