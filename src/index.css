@@ -16,10 +16,32 @@ code {
 @tailwind components;
 @tailwind utilities;
 
+*::-webkit-scrollbar {
+  display: none;
+}
 @layer {
   .wave-image-cover {
     background: url("../public/wave-image.png");
     background-size: cover;
     background-position: center;
+  }
+
+  .active-account-profile-tab {
+    border-top-left-radius: 37px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  .active-account-business-tab {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  .inacive-tab-profile {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .inactive-last-tab {
+    border-top-right-radius: 16px;
   }
 }

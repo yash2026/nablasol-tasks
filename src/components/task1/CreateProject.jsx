@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, message, Steps } from "antd"; // Using Ant Design components
+import { Button, message } from "antd"; // Using Ant Design components
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import Step1 from "./_components/Step1";

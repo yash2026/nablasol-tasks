@@ -9,10 +9,6 @@ const Step1 = ({ formData, setFormData }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleDatesChange = (dates) => {
-    setFormData({ ...formData, dates });
-  };
-
   const handleStartDateChange = (date) => {
     const formattedDate = date ? date.format("YYYY-MM-DD") : null;
     setFormData({
