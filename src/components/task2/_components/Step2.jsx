@@ -12,18 +12,20 @@ const Step2 = ({ formData, onChange }) => {
   return (
     <div className="px-20 h-full max-[540px]:px-4">
       {/* Step and Description */}
-      <h3 className="text-center text-xl font-medium text-gray-500">Step 2</h3>
-      <h4 className="text-center text-2xl font-medium text-gray-700">
+      <h3 className="text-center text-xl font-medium text-gray-500 max-[540px]:text-base">
+        Step 2
+      </h3>
+      <h4 className="text-center text-2xl font-medium text-gray-700 max-[540px]:text-lg">
         Business Information
       </h4>
-      <p className="text-center text-gray-500 mb-2 text-sm ">
+      <p className="text-center text-gray-500 mb-2 text-sm max-[540px]:text-xs">
         Please, enter information about your company.
       </p>
 
-      <div className=" overflow-y-auto h-[65%] rounded-b pb-6 max-[540px]:h-[75%]">
+      <div className=" overflow-y-auto h-[64%] rounded-b pb-6 ">
         {/* General Information Section */}
         <div className="mb-4">
-          <h3 className=" font-medium text-blue-500 mb-1">
+          <h3 className=" font-medium text-blue-500 mb-1 max-[540px]:text-sm">
             GENERAL INFORMATION
           </h3>
           <div className="grid grid-cols-2 gap-2  gap-x-4">
@@ -33,7 +35,7 @@ const Step2 = ({ formData, onChange }) => {
               </label>
               <input
                 type="text"
-                className="w-full p-1 border border-gray-300 rounded-md"
+                className="w-full p-1 border border-gray-300 rounded-md max-[540px]:text-xs"
                 value={formData.brandName || ""}
                 onChange={(e) => onChange("brandName", e.target.value)}
                 placeholder="Input Your Brand Name"
@@ -60,7 +62,7 @@ const Step2 = ({ formData, onChange }) => {
               </label>
               <input
                 type="text"
-                className="w-full p-1 border border-gray-300 rounded-md"
+                className="w-full p-1 border border-gray-300 rounded-md max-[540px]:text-xs"
                 value={formData.brandType || ""}
                 onChange={(e) => onChange("brandType", e.target.value)}
                 placeholder="Select Type of Your Brand"
@@ -72,7 +74,7 @@ const Step2 = ({ formData, onChange }) => {
               </label>
               <input
                 type="text"
-                className="w-full p-1 border border-gray-300 rounded-md"
+                className="w-full p-1 border border-gray-300 rounded-md max-[540px]:text-xs"
                 value={formData.streetAddress || ""}
                 onChange={(e) => onChange("streetAddress", e.target.value)}
                 placeholder="Input Your Street Address"
@@ -84,7 +86,7 @@ const Step2 = ({ formData, onChange }) => {
               </label>
               <input
                 type="text"
-                className="w-full p-1 border border-gray-300 rounded-md"
+                className="w-full p-1 border border-gray-300 rounded-md max-[540px]:text-xs"
                 value={formData.city || ""}
                 onChange={(e) => onChange("city", e.target.value)}
                 placeholder="Input City"
@@ -96,7 +98,7 @@ const Step2 = ({ formData, onChange }) => {
               </label>
               <input
                 type="text"
-                className="w-full p-1 border border-gray-300 rounded-md"
+                className="w-full p-1 border border-gray-300 rounded-md max-[540px]:text-xs"
                 value={formData.zipCode || ""}
                 onChange={(e) => onChange("zipCode", e.target.value)}
                 placeholder="Input Zip Code"
@@ -108,7 +110,7 @@ const Step2 = ({ formData, onChange }) => {
               </label>
               <input
                 type="text"
-                className="w-full p-1 border border-gray-300 rounded-md"
+                className="w-full p-1 border border-gray-300 rounded-md max-[540px]:text-xs"
                 value={formData.taxIdNumber || ""}
                 onChange={(e) => onChange("taxIdNumber", e.target.value)}
                 placeholder="Input Tax ID Number"
@@ -119,8 +121,10 @@ const Step2 = ({ formData, onChange }) => {
 
         {/* Documents Section */}
         <div className="mb-4">
-          <h3 className="font-medium text-blue-500 mb-1">DOCUMENTS</h3>
-          <p className="text-sm mb-1">
+          <h3 className="font-medium text-blue-500 mb-1 max-[540px]:text-sm">
+            DOCUMENTS
+          </h3>
+          <p className="text-sm mb-1 max-[540px]:text-xs">
             Once the following documents are signed, you'll be ready to get
             started
           </p>
@@ -128,7 +132,7 @@ const Step2 = ({ formData, onChange }) => {
             <div className="w-full p-2 border border-gray-300 rounded-md flex flex-row justify-between items-center gap-2">
               <input
                 type="text"
-                className="w-full text-sm"
+                className="w-full text-sm max-[540px]:text-xs"
                 placeholder="Electronically sign the aggrement(s)"
               />
               <FontAwesomeIcon icon={faCheck} className="text-[#46b361] mr-2" />
@@ -141,7 +145,7 @@ const Step2 = ({ formData, onChange }) => {
             <div className="w-full p-2 border border-gray-300 rounded-md flex flex-row justify-between items-center gap-2">
               <input
                 type="text"
-                className="w-full text-sm"
+                className="w-full text-sm max-[540px]:text-xs"
                 placeholder="Non-adult beverage Kroger market supplier waiver and release"
               />
               <FontAwesomeIcon icon={faXmark} className="text-[#cb4a4a] mr-2" />
@@ -154,8 +158,10 @@ const Step2 = ({ formData, onChange }) => {
 
         {/* COI PDF Upload Section */}
         <div>
-          <h3 className="font-medium text-blue-500 mb-1">COI PDF UPLOAD</h3>
-          <p className="text-sm mb-1">
+          <h3 className="font-medium text-blue-500 mb-1 max-[540px]:text-sm">
+            COI PDF UPLOAD
+          </h3>
+          <p className="text-sm mb-1 max-[540px]:text-xs">
             Once the following documents are signed, you'll be ready to get
             started
           </p>
@@ -163,7 +169,7 @@ const Step2 = ({ formData, onChange }) => {
             <div className="w-full p-2 border border-gray-300 rounded-md flex flex-row justify-between items-center">
               <input
                 type="text"
-                className="w-full text-sm"
+                className="w-full text-sm max-[540px]:text-xs"
                 placeholder="Electronically sign the aggrement(s)"
               />
               <FontAwesomeIcon icon={faCheck} className="text-[#46b361] mr-2" />

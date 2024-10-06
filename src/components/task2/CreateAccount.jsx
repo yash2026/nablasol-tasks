@@ -161,15 +161,17 @@ const CreateAccount = () => {
             }`}
             onClick={() => setActiveStep(1)}
           >
-            <div className="rounded-full w-5 h-5 flex items-center text-sm justify-center font-semibold bg-white text-blue-500">
+            <div className="rounded-full w-5 h-5 flex items-center text-sm max-[540px]:text-xs justify-center font-semibold bg-white text-blue-500">
               1
             </div>
-            <span className="ml-2 text-lg">Your Profile</span>
+            <span className="ml-2 text-lg max-[540px]:text-xs">
+              Your Profile
+            </span>
           </div>
 
           {/* Step 2 Tab - Business Information */}
           <div
-            className={`flex items-center justify-center cursor-pointer ${
+            className={`flex items-center justify-center px-2 cursor-pointer ${
               activeStep === 2
                 ? "bg-blue-500 text-white active-account-business-tab"
                 : ""
@@ -177,7 +179,7 @@ const CreateAccount = () => {
             onClick={() => setActiveStep(2)}
           >
             <div
-              className={`rounded-full w-5 h-5 flex items-center text-sm justify-center font-semibold  ${
+              className={`rounded-full w-5 h-5 flex items-center text-sm justify-center font-semibold max-[540px]:text-xs  ${
                 activeStep === 2
                   ? "bg-white text-blue-500"
                   : "text-[#EDF0FF] bg-[#94a6da]"
@@ -186,7 +188,7 @@ const CreateAccount = () => {
               2
             </div>
             <span
-              className={`ml-2  text-lg  ${
+              className={`ml-2  text-lg max-[540px]:text-xs  ${
                 activeStep === 2 ? "text-white " : "text-[#94a6da]"
               }`}
             >
@@ -196,10 +198,10 @@ const CreateAccount = () => {
 
           {/* Additional Users - Inactive */}
           <div className="flex items-center justify-center inactive-last-tab">
-            <div className="rounded-full w-5 h-5 flex items-center text-sm justify-center font-semibold text-[#EDF0FF] bg-[#94a6da]">
+            <div className="rounded-full w-5 h-5 flex items-center text-sm max-[540px]:text-xs justify-center font-semibold text-[#EDF0FF] bg-[#94a6da]">
               3
             </div>
-            <span className="ml-2 text-lg text-[#94a6da]">
+            <span className="ml-2 text-lg text-[#94a6da] max-[540px]:text-xs">
               Additional Users
             </span>
           </div>
@@ -215,7 +217,7 @@ const CreateAccount = () => {
       </div>
       <div className="h-[10%] w-full max-w-4xl flex items-center justify-between px-2">
         <button
-          className="text-[#2e71ab] font-medium"
+          className="text-[#2e71ab] font-medium  max-[540px]:text-sm"
           onClick={() => navigate("/create-project")}
         >
           <FontAwesomeIcon icon={faChevronLeft} className="mr-2" />
@@ -224,7 +226,7 @@ const CreateAccount = () => {
         <div className="space-x-2">
           {activeStep > 1 && (
             <button
-              className="bg-white text-[#6371ef] hover:bg-[#6371ef] border border-[#6371ef] hover:text-white font-medium px-6 py-2 rounded-lg"
+              className="bg-white text-[#6371ef] hover:bg-[#6371ef] border border-[#6371ef] hover:text-white font-medium max-[540px]:px-2 max-[540px]:text-sm px-6 py-2 rounded-lg"
               onClick={goPreviousStep}
             >
               <FontAwesomeIcon icon={faChevronLeft} className="mr-2" />
@@ -232,7 +234,7 @@ const CreateAccount = () => {
             </button>
           )}
           <button
-            className="bg-[#7580EA] hover:bg-[#6371ef] text-white font-medium px-6 py-2 rounded-lg"
+            className="bg-[#7580EA] hover:bg-[#6371ef] text-white font-medium px-6 py-2 rounded-lg max-[540px]:px-2 max-[540px]:text-sm"
             onClick={handleSubmit}
           >
             {activeStep === 2 ? "Submit" : "Next step"}
