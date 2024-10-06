@@ -4,7 +4,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Step1 from "./_components/Step1";
 import Step2 from "./_components/Step2";
 import { useNavigate } from "react-router-dom";
@@ -28,11 +28,6 @@ const CreateAccount = () => {
   const [formData, setFormData] = useState(initialFormData);
   const [activeStep, setActiveStep] = useState(1);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    // Reset form data to initial state on mount
-    setFormData(initialFormData);
-  }, []);
 
   const handleInputChange = (field, value) => {
     setFormData({
